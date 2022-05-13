@@ -1,0 +1,252 @@
+/*board setup*/
+.mainContainer{
+	width: 450px;
+	height:600px;
+	float:left;
+	background: linear-gradient(217deg, rgba(146,43,33,.8), rgba(146,43,33,0) 70.71%),
+				linear-gradient(127deg, rgba(237,209,16,.8), rgba(237,209,16,0) 70.71%),
+				linear-gradient(336deg, rgba(5,74,113,.8), rgba(5,74,113,0) 70.71%);
+}
+
+.sideContainer{
+	width: 100px;
+	height: 550px;
+	float:left;
+	margin-left:10px;
+	margin-top:-4px;
+}
+
+.rowContainer{
+	width: 450px;
+	height:150px;
+}
+
+.score{
+	width: 450px;
+	height: 60px;
+	border-radius: 8px;
+	border: 1px solid black;
+	margin-top: 5px;
+}
+
+.slot {
+	width: 23%;
+	height:95%;
+	margin:3px;
+	border-radius:8px;
+	border: 1px solid white;
+	float:left;
+	background-color:transparent;
+	box-shadow: 0px 8px 12px 0 rgba(0,0,0,0.2) inset, 0 10px 24px 0 rgba(0,0,0,0.19) inset;
+	position:relative;
+}
+
+/*Card Setup*/
+.blocker{
+	width:100%;
+	height:100%;
+	border-radius:8px;
+	margin-left:-1px;
+	margin-top:-1px;
+	background: linear-gradient(154deg, rgba(220,220,220,.8), rgba(128,128,128,.8), rgba(220,220,220,.8) 70%),
+				linear-gradient(92deg, rgba(220,220,220,.8), rgba(128,128,128,.8), rgba(220,220,220,.8) 40%);
+	border: 1px solid gray;
+}
+
+.cardHolder{
+	width:95px;
+	height: 115px;
+	border-radius: 6px;
+	background:transparent;
+	border: 1px solid black;
+	margin: 4px;
+	box-shadow: inset 0px 0px 0px 10px white;
+	box-sizing: border-box;
+	position:relative;
+}
+
+.card{
+	width:100%;
+	height:100%;
+	border-radius:8px;
+	left:-4.5px;
+	top:-4.5px;
+	border: 1px solid black;
+	margin: 4px;
+	box-shadow: inset 0px 0px 0px 10px white;
+	box-sizing: border-box;
+	position:absolute;
+	
+}
+
+.cardHolder:hover{
+	transform: scale(1.2);
+	transition: all 1s;
+	z-index:2;
+}
+
+.cardHolder:not( :hover){
+	transform:scale(1);
+	transition:all 1s;
+	z-index:0;
+}
+
+/*Arrows on Cards*/
+.arrow-ul {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width:7px 7px 0 0;
+	border-color: black transparent transparent transparent;
+	position:absolute;
+	top:3%;
+	left:3%;
+}
+
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid black;
+  position: absolute;
+  top:3%;
+  left:42%;
+}
+
+.arrow-ur {
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 0 7px 7px 0;
+border-color: transparent black transparent transparent;
+position:absolute;
+top:3%;
+left:90%;
+}
+
+.arrow-left {
+  width: 0; 
+  height: 0; 
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent; 
+  border-right:5px solid black; 
+  position:absolute;
+  top:42%;
+  left:2%;
+}
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid black;
+  position:absolute;
+  top:42%;
+  left:93%;
+}
+
+.arrow-dl{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 7px 0 0 7px;
+	border-color: transparent transparent transparent black;
+	position:absolute;
+	top:90%;
+	left:3%;
+}
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+  position:absolute;
+  top:93%;
+  left:42%;
+}
+
+.arrow-dr {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 7px 7px;
+	border-color: transparent transparent black transparent;
+	position:absolute;
+	top:90%;
+	left:90%;
+}
+
+.foe {
+	box-shadow: inset 0px 0px 0px 10px gray;
+	transition: box-shadow .5s ease-in-out;
+	  transition-delay: .5s;
+
+}
+
+.friend {
+	box-shadow: inset 0px 0px 0px 10px white;
+	transition: box-shadow .5s ease-in-out;
+	transition-delay: .5s;
+}
+
+/*Battle Movements*/
+.moveCardDown{
+  transform:translateY(15px);
+  transition-duration: .5s;
+}
+
+.moveCardUp{
+  transform:translateY(-15px);
+  transition-duration: .5s;
+}
+
+.moveCardLeft{
+  transform:translateX(-15px);
+  transition-duration: .5s;
+}
+
+.moveCardRight{
+  transform:translateX(15px);
+  transition-duration: .5s;
+}
+
+.moveCardDownLeft{
+  transform:translate(-15px, 15px);
+  transition-duration: .5s;
+}
+
+.moveCardUpLeft{
+  transform:translate(-15px,-15px);
+  transition-duration: .5s;
+}
+
+.moveCardDownRight{
+  transform:translate(15px,15px);
+  transition-duration: .5s;
+}
+
+.moveCardUpRight{
+  transform:translate(15px,-15px);
+  transition-duration: .5s;
+}
+
+
+@-webkit-keyframes glow {
+    to {
+		border-color: #69c800;
+    }
+}
+
+.battler {
+    background-color: #ccc;
+    border: 5px solid transparent;
+    -webkit-animation: glow .5s infinite alternate;  
+    -webkit-transition: border .5s linear;
+    -moz-transition: border .5s linear;
+    transition: border .5s linear;
+
+}
