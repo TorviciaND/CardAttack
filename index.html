@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel = "stylesheet" type = "text/css" href = "TetraMaster.css">
+	<script src = "TetraMaster.js"></script>
+
+</head>
+
+<body>
+<div class = "mainPage">
+	<div class = "mainContainer" id = "mainContainer">
+		<script> 
+			var isClicked;
+			var toBePlaced;
+			blockers = createBlockers();
+			usedSlots = blockers;
+			createBoard();
+			createScore();
+			
+		</script>
+	</div>
+	
+	<div class = "sideContainer">
+		<script> createCards(); </script>
+	</div>
+</div>
+</body>
+
+</html>
