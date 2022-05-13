@@ -32,6 +32,22 @@ constructor(picture, ul, u, ur, l, r, dl, d, dr, defense, offense, friendly, pla
 }
 
 /*Board Setup */
+function createMainContainer(){
+	document.write("<div class = 'mainPage'> <div class = 'mainContainer' id = 'mainContainer'>");
+	
+	var isClicked;
+	var toBePlaced;
+	blockers = createBlockers();
+	usedSlots = blockers;
+	createBoard();
+	createScore();
+	document.write("</div>");
+	
+	document.write("<div class = 'sideContainer'>");
+	createCards();
+	document.write("</div></div>");
+}
+
 function createBlockers(){
 	var arr = [];
 	var numBlockers = Math.floor(Math.random() * 5) + 1;
